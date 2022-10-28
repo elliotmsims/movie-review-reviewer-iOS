@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieReviewReviewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input your movie review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM2-5v-IP4">
+                                <rect key="frame" x="78" y="164" width="272" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FiW-zd-P7h">
+                                <rect key="frame" x="64" y="232" width="300" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FGL-wh-5mh"/>
+                                    <constraint firstAttribute="height" constant="200" id="GHS-Hq-UeF"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbQ-8f-PhO">
+                                <rect key="frame" x="112" y="594.66666666666663" width="204" height="42"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Generate Result" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbn-Ax-fNz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now, press the button to predict if the movie review is positive or negative" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1g-kz-xgi">
+                                <rect key="frame" x="20" y="472.00000000000006" width="388" height="82.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="388" id="Miz-fd-bG9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="predicted review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoT-gS-ie3">
+                                <rect key="frame" x="91.666666666666686" y="676.66666666666663" width="245" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.27058823529999998" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.91372549020000005" green="0.27058823529999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xbQ-8f-PhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0uf-Dg-8tL"/>
+                            <constraint firstItem="A1g-kz-xgi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="10A-nd-bqu"/>
+                            <constraint firstItem="oM2-5v-IP4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1tY-0U-e6w"/>
+                            <constraint firstItem="FiW-zd-P7h" firstAttribute="top" secondItem="oM2-5v-IP4" secondAttribute="bottom" constant="40" id="2nF-Hh-C6O"/>
+                            <constraint firstItem="FiW-zd-P7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K3G-dY-ciH"/>
+                            <constraint firstItem="zoT-gS-ie3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MEr-An-RaU"/>
+                            <constraint firstItem="oM2-5v-IP4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="QXI-39-h3i"/>
+                            <constraint firstItem="xbQ-8f-PhO" firstAttribute="top" secondItem="A1g-kz-xgi" secondAttribute="bottom" constant="40" id="gxh-rP-tbr"/>
+                            <constraint firstItem="zoT-gS-ie3" firstAttribute="top" secondItem="xbQ-8f-PhO" secondAttribute="bottom" constant="40" id="m60-ft-CRN"/>
+                            <constraint firstItem="A1g-kz-xgi" firstAttribute="top" secondItem="FiW-zd-P7h" secondAttribute="bottom" constant="40" id="yfd-3N-ckY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="predictedReviewLabel" destination="zoT-gS-ie3" id="WiM-ml-v0x"/>
+                        <outlet property="textBox" destination="FiW-zd-P7h" id="z49-4y-BBP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.22429906542056" y="63.498920086393092"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
